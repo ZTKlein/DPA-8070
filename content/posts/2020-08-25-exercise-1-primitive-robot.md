@@ -2,7 +2,7 @@
 template: post
 title: "Exercise 1:  Primitive Robot"
 slug: ex-1-primitive-robot
-draft: true
+draft: false
 date: 2020-08-25T21:45:39.914Z
 description: For exercise 1, we were meant to build a robot using only
   primitives and basic translation, rotation, and scaling.
