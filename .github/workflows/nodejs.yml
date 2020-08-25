@@ -25,8 +25,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install -g yarn
-    - run: yarn install --frozen-lockfile
-    - run: yarn run lint
-    - run: yarn run test --runInBand --no-cache
+    - run: npm install --frozen-lockfile
+    - run: npm run lint
+    - run: npm run test --runInBand --no-cache
       env:
         CI: true
