@@ -12,12 +12,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn install --frozen-lockfile
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run: npm install --frozen-lockfile
       - save_cache:
           paths:
             - node_modules
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: dependencies-{{ checksum "package.json" }}
 
   lint:
     <<: *defaults
@@ -25,8 +25,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn lint
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run: npm run lint
 
   test:
     <<: *defaults
@@ -34,8 +34,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn test --runInBand --no-cache
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run: npm run test --runInBand --no-cache
 
   coverage:
     <<: *defaults
@@ -43,8 +43,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn test:coverage --runInBand --no-cache
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run: npm run test:coverage --runInBand --no-cache
       - save_cache:
           key: coverage-{{ .Environment.CIRCLE_SHA1 }}
           paths:
@@ -56,12 +56,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
+            - dependencies-{{ checksum "package-lock.json" }}
       - restore_cache:
           keys:
             - coverage-output-{{ .Environment.CIRCLE_SHA1 }}
-      - run: yarn global add codecov
-      - run: yarn codecov
+      - run: npm run global add codecov
+      - run: npm run codecov
     
 workflows:
   version: 2
