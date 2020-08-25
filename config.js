@@ -18,7 +18,7 @@ module.exports = {
   ],
   author: {
     name: 'Zach Klein',
-    photo: '/test.jpg',
+    photo: '/photo.jpg',
     bio: 'Hi, I\'m Zach. I like to slap at a keyboard and pray good things happen; for now, this is my site for DPA 8070 projects',
     contacts: {
       email: '',
