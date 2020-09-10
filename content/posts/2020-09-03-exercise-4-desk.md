@@ -17,7 +17,7 @@ Model a desk. I decided to make everything using only one starting primitive.
 
 I started off with a basic block for a desk, and added a few edge loops to allow extruding in the center. I then tried using multicut to get appropriate topology for the drawers.
 
-![Multicut](/media/ex2_drawers_multicut.PNG "Multicut drawers")
+![Multicut](/media/ex4_drawers_multicut.PNG "Multicut drawers")
 
 I quickly found out, however, that doing it like this led to topology issues, so I started from scratch and made sure to use edge loops for EVERYTHING. The only times I used multicut was to clean up topology that I broke (which happened far more often than I'd like to admit). In the end, I'm happy with what I managed to achieve using only edge loops, scaling, and extruding.
 
