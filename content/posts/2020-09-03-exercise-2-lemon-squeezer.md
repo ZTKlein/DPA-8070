@@ -1,10 +1,10 @@
 ---
 template: post
-title: "Exercise 2:  Lemon Squeezer"
-slug: ex-2-lemon-squeezer
+title: "Exercise 3:  Lemon Squeezer"
+slug: ex-3-lemon-squeezer
 draft: false
 date: 2020-09-03T03:33:47.707Z
-description: For our second modeling exercise, we had to model a lemon squeezer.
+description: For our third modeling exercise, we had to model a lemon squeezer.
 category: Exercises
 tags:
   - exercises

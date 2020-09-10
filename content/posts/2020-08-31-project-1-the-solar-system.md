@@ -1,6 +1,6 @@
 ---
 template: post
-title: "Project1/Exercise 3:  The Solar System"
+title: "Project1/Exercise 2:  The Solar System"
 slug: pr-1-solar-system
 draft: false
 date: 2020-08-31T06:34:47.760Z
