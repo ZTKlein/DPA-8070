@@ -1,10 +1,10 @@
 ---
 template: post
-title: "Project1/Exercise 2:  The Solar System"
-slug: pr-1-solar-system
+title: "Exercise 2:  The Solar System"
+slug: ex-2-solar-system
 draft: false
 date: 2020-08-31T06:34:47.760Z
-description: For our first project, we had to animate the solar system.
+description: For our second project, we had to animate the solar system.
 category: Exercises
 tags:
   - projects
