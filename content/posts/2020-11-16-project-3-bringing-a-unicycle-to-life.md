@@ -2,7 +2,7 @@
 template: post
 title: "Project 3:  Bringing a Unicycle to Life"
 slug: pr-3-unicycle
-draft: true
+draft: false
 date: 2020-11-16T14:24:20.737Z
 description: For project 3, we had to rig and animate a unicycle.
 category: Projects
@@ -24,17 +24,18 @@ From the get-go, I already knew what I wanted to do with this scene -- I wanted 
 
 For the unicycle itself, I just used aiStandardSurface nodes for the materials -- bump down the specular on the seat and up the roughness a bit, use a metallic material for the metal bits, and then bump down the specular on the tire. For the tire, I also fed a ramp into the displacement to give it a bit more detail.
 
-[placeholder image]
+![Tire graph](/media/pr3-tiregraph.png "Tire graph")
+![Tire](/media/pr3-tire.jpg "Tire")
 
-The surroundings were a given; I was doing a **_COOL GLOWY GRID_**, which was pretty easily done by making a really big plane and feeding a tiled grid node into the color and emission.
+The surroundings were a given; I was doing a **_COOL GLOWY GRID_**, which was pretty easily done by making a really big plane and feeding a tiled grid node into the emission.
 
-[placeholder image]
+![Grid](/media/pr3-grid.png "Grid")
 
 ### Rigging
 
 The basic rig was pretty simple; I just added a world control and a root control. I knew I wanted to add some sort of deformer for squash and stretch, but I wasn't quite sure how to rig it up. Eventually I settled on using a lattice deformer with cluster handles on the top and bottom, and after some trial and error (and tutorials) I managed to get it to properly move with the rest of the rig.
 
-[placeholder image]
+![Rig](/media/pr3-rig.png "Rig")
 
 ### Animation
 
@@ -50,6 +51,10 @@ This part took me the longest to figure out. I tried a lot of different things, 
 
 Once I had the path following the unicycle closely enough to be satisfactory, it was time to light it up. I spent some time futzing with mesh lights, since they tend to be less noisy than emissions, but I couldn't get the light to properly emit from both sides of the trail this way, so I ended up going back and making an emissive shader. I also added transparency to the material for the trail, so it has a see-through effect. To help add a bit of "glow" to the lights, I also added an atmosphereVolume to the scene, since I don't know anything about using tools to add that in post.
 
+Here's a screenshot of the curves used -- the bottom one is the curve I used as a motion path, the top one is the curve defined by the motion trail that I used for the path of the light.
+
+![Curves](/media/pr3-curves.png "Curves")
+
 ### Camerawork
 
 I know that more static shots and less shots total would have been simpler, but unfortunately the way I set up my scene covered a very large area. I ended up using multiple aim and point constraints on a camera to keyframe it, using constraint blending to get the desired setup. I broke my keyframe setup a few times doing this, so I'm glad I kept saving as I worked on it. I'm glad I did things this way in the end, though, because keyframing constraints seems like a useful thing to learn.
@@ -60,6 +65,16 @@ At first, I wanted quality, so I followed the guide laid out at https://docs.arn
 
 After bumping down all the settings to the point that it would just take a day for my PC to do the renders, I enabled denoise AOVs so that I could at least use the Arnold denoiser utility once everything was done, and I hit batch render and went to bed. I forgot the fact that that watermarks images, so in the morning I started up a sequence render after checking on the images that had been output.
 
-Once that was done, I used the denoiser (not the OptiX one, that doesn't work so great on animations -- it's not consistent across frames), and here's the result:
+Once that was done, I used the denoiser (not the OptiX one, that doesn't work so great on animations -- it's not temporally stable). That's still running at the moment, so this video will be updated once that's done.
+
+I don't know anything about handling color correction in Premiere, so things turned out a bit more purple than I planned, but ultimately I'm fine with how it ended up looking. Here's the result:
+
+<video width="800" height="600" controls>
+  <source src="/media/troncycle_1.mp4" type="video/mp4">
+</video>
+
+### Things I'd do differently
 
 If I ever learn sound design/editing, I'd actually like to go back and add some effects to this. For now, though, I'm happy with the results. It's not perfect, but I got the chance to learn about several tools in Maya I can use for interesting effects. If I ever had to do this effect again, though, I'd probably take the advice of what everyone said on the forum posts I found about light trails and use another program.
+
+One of the biggest things I think I should have done is redo the initial motion path curve to include the jump, instead of animating the jump using the root controller. That way I could have used the same path for both the light trail and the unicycle.
