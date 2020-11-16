@@ -18,7 +18,7 @@ Rig and animate a unicycle. The animation must be between 10 and 20 seconds.
 
 ### Idea
 
-From the get-go, I already knew what I wanted to do with this scene -- I wanted to make a Tron-cycle (Tron-unicycle? Is Tron-cycle too ambiguous with regards to the original?). I set out to accomplish this, and very quickly realized I had no idea how to accomplish this. That said, I was determined to learn how to do this ("How hard can a light trail in Maya be, Zach?" -- oh sweet summer child).
+From the get-go, I already knew what I wanted to do with this scene -- I wanted to make a Tron-cycle (Tron-unicycle? Is Tron-cycle too ambiguous with regards to the original?). I set out to accomplish this, and very quickly realized I had no idea how to accomplish this. That said, I was determined to learn how to do it ("How hard can a light trail in Maya be, Zach?" -- oh sweet summer child).
 
 ### Materials
 
@@ -39,11 +39,11 @@ The basic rig was pretty simple; I just added a world control and a root control
 
 ### Animation
 
-I decided to use a curve to define the motion path for the unicycle. At first I used a Bezier curve, but that seemed to cause some weird issues with the unicycle wobbling, so I went back and tried to redo it with the regular CV curve tool. Once this was done, I just used some trial and error to set up the unicycle to properly follow the path facing forward.
+I decided to use a curve to define the motion path for the unicycle. At first I used a Bezier curve, but that seemed to cause some weird issues with the unicycle wobbling, so I went back and tried to redo it with the regular CV curve tool. Once this was done, I just used some trial and error to set up the unicycle to properly follow the path facing forward, and used the graph editor to tweak the animation curve.
 
-Once this was done, I keyframed the motion of the unicycle, using the motion path twist attributes to add some banking on turns. Where the path crosses itself I knew I planned on having a light trail, so I decided to use the root controller to animate the bike jumping over the trail that would be there (otherwise I'd have to animate it exploding).
+After that was done, I keyframed the motion of the unicycle, using the motion path twist attributes to add some banking on turns. Where the path crosses itself I knew I planned on having a light trail, so I decided to use the root controller to animate the bike jumping over the trail that would be there (otherwise I'd have to animate it exploding).
 
-Once I had the general motion of the bike keyframed, I went back and used the deformer controls. At the start of the animation, I tried to use deformations to add some anticipation before the motion similar to a road-runner style start. I wanted the unicycle to immediately start at full speed like a Tron bike, but I wanted to still give some form of visual cue that it was about to start moving. It didn't quite turn out how I was hoping, but it gives some windup to the initial movement. Then, for the jump I added squash and stretch. Finally, at the end, I decided to have the unicycle skid to a halt, so I turned it 90 degrees, angled it, and used squash and stretch again to give an exaggerated effect and a sense of follow-through.
+Once the general motion of the bike was keyframed, I went back and used the deformer controls. At the start of the animation, I tried to use deformations to add some anticipation before the motion similar to a road-runner style start. I wanted the unicycle to immediately start at full speed like a Tron bike, but I wanted to still give some form of visual cue that it was about to start moving. It didn't quite turn out how I was hoping, but it gives some windup to the initial movement. Then, for the jump I added squash and stretch. Finally, at the end, I decided to have the unicycle skid to a halt, so I turned it 90 degrees, angled it, and used squash and stretch again to give an exaggerated effect and a sense of follow-through.
 
 ### The light trail
 
@@ -73,8 +73,20 @@ I don't know anything about handling color correction in Premiere, so things tur
   <source src="/media/troncycle_1.mp4" type="video/mp4">
 </video>
 
+Here's three frames from the animation. Frame 55 is just an example of the unicycle moving with the light trail:
+
+![Frame 55](/media/pr3-troncycle_55.png "Frame 55")
+
+Frame 227 shows the unicycle squashing after a jump:
+
+![Frame 227](/media/pr3-troncycle_227.png "Frame 227")
+
+Frame 371 shows the unicycle stretching out as it screeches to a halt:
+
+![Frame 371](/media/pr3-troncycle_371.png "Frame 371")
+
 ### Things I'd do differently
 
 If I ever learn sound design/editing, I'd actually like to go back and add some effects to this. For now, though, I'm happy with the results. It's not perfect, but I got the chance to learn about several tools in Maya I can use for interesting effects. If I ever had to do this effect again, though, I'd probably take the advice of what everyone said on the forum posts I found about light trails and use another program.
 
-One of the biggest things I think I should have done is redo the initial motion path curve to include the jump, instead of animating the jump using the root controller. That way I could have used the same path for both the light trail and the unicycle.
+One of the biggest things I think I should have done is redo the initial motion path curve to include the jump, instead of animating the jump using the root controller. That way I could have used the same path for both the light trail and the unicycle. I also think it would be neat to do an animation with multiple vehicles using the same light trail effect at some point.
