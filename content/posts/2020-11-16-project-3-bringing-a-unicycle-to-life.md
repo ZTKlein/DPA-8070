@@ -61,3 +61,5 @@ At first, I wanted quality, so I followed the guide laid out at https://docs.arn
 After bumping down all the settings to the point that it would just take a day for my PC to do the renders, I enabled denoise AOVs so that I could at least use the Arnold denoiser utility once everything was done, and I hit batch render and went to bed. I forgot the fact that that watermarks images, so in the morning I started up a sequence render after checking on the images that had been output.
 
 Once that was done, I used the denoiser (not the OptiX one, that doesn't work so great on animations -- it's not consistent across frames), and here's the result:
+
+If I ever learn sound design/editing, I'd actually like to go back and add some effects to this. For now, though, I'm happy with the results. It's not perfect, but I got the chance to learn about several tools in Maya I can use for interesting effects. If I ever had to do this effect again, though, I'd probably take the advice of what everyone said on the forum posts I found about light trails and use another program.
