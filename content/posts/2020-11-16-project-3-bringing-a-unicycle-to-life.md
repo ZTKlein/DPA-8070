@@ -65,12 +65,16 @@ At first, I wanted quality, so I followed the guide laid out at https://docs.arn
 
 After bumping down all the settings to the point that it would just take a day for my PC to do the renders, I enabled denoise AOVs so that I could at least use the Arnold denoiser utility once everything was done, and I hit batch render and went to bed. I forgot the fact that that watermarks images, so in the morning I started up a sequence render after checking on the images that had been output.
 
-Once that was done, I used the denoiser (not the OptiX one, that doesn't work so great on animations -- it's not temporally stable). That's still running at the moment, so this video will be updated once that's done.
+Once that was done, I used the denoiser (not the OptiX one, that doesn't work so great on animations -- it's not temporally stable).
 
-I don't know anything about handling color correction in Premiere, so things turned out a bit more purple than I planned, but ultimately I'm fine with how it ended up looking. Here's the result:
+I don't know anything about handling color correction in Premiere, so things turned out a bit more purple than I planned, but ultimately I'm fine with how it ended up looking. Here's the result; the first video is the original output, while the second is denoised:
 
-<video width="800" height="600" controls>
+<video width="800" height="600" controls style="text-align: center;">
   <source src="/media/troncycle_1.mp4" type="video/mp4">
+</video>
+
+<video style="text-align: center;">
+  <source src="/media/pr3-troncycle_denoise.mp4" type="video/mp4">
 </video>
 
 Here's three frames from the animation. Frame 55 is just an example of the unicycle moving with the light trail:
