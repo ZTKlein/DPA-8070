@@ -67,13 +67,13 @@ After bumping down all the settings to the point that it would just take a day f
 
 Once that was done, I used the denoiser (not the OptiX one, that doesn't work so great on animations -- it's not temporally stable).
 
-I don't know anything about handling color correction in Premiere, so things turned out a bit more purple than I planned, but ultimately I'm fine with how it ended up looking. Here's the result; the first video is the original output, while the second is denoised:
+I don't know anything about handling color correction in Premiere, so things turned out a bit more purple than I planned, but ultimately I'm fine with how it ended up looking. Here's the result; the first video is the original output, while the second is denoised using noice:
 
-<video width="800" height="600" controls style="text-align: center;">
+<video width="800" height="600" controls style="display:block; margin: 0 auto;">
   <source src="/media/troncycle_1.mp4" type="video/mp4">
 </video>
 
-<video style="text-align: center;">
+<video  controls style="display:block; margin: 0 auto;">
   <source src="/media/pr3-troncycle_denoise.mp4" type="video/mp4">
 </video>
 
