@@ -2,7 +2,7 @@
 template: post
 title: "Final Project:  Volume Displacement"
 slug: prf-volumes
-draft: true
+draft: false
 date: 2020-12-10T01:35:22.423Z
 description: For my final project, I decided I wanted to try messing with
   volumes in Maya to create some aesthetically pleasing and visually interesting
@@ -13,7 +13,7 @@ tags:
 ---
 ## The final project
 
-For my final project, I knew already what I wanted to do -- I wanted to mess with volumes. I was inspired by Lee Griggs's work with volume meshes such as what's shown on his page here [https://leegriggs.com/volume-mesh](https://leegriggs.com/volume-mesh). So, I set out to learn how to accomplish this in Maya.
+For my final project, I knew already what I wanted to do -- I wanted to mess with volumes. I was inspired by Lee Griggs's work with volume meshes such as what's shown on his page here <https://leegriggs.com/volume-mesh>. So, I set out to learn how to accomplish this in Maya.
 
 ### The first step
 
@@ -41,8 +41,8 @@ Things were a bit too distorted, so I had to then try to reign it in a bit. I al
 
 And here's a high-quality render:
 
-![high quality](/media/prf_skull_hires.jpg "Hi res")
+![high quality](/media/prf_skull_hires.png "Hi res")
 
 ### Continuation
 
-Something I want to do going forth is try feeding into a mask with a ramp node to try limiting the displacement to only half of the object, and using a procedural noise or a video as the input so that I can keyframe it in order to animate half of the skull while the other remains still. 
+Something I want to do going forth is try feeding into a mask with a ramp node to try limiting the displacement to only half of the object, and using a procedural noise or a video as the input so that I can keyframe it in order to animate half of the skull while the other remains still.
