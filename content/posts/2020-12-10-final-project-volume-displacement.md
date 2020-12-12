@@ -43,7 +43,7 @@ And here's a high-quality render:
 
 ![high quality](/media/prf_skull_hires.png "Hi res")
 
-For animating this, I wanted to try doing a turnaround, with the color projection remaining constant and the displacement shifting along around the skull. This meant using separate cameras for the projections and animating one. It didn't quite turn out how I was hoping, but it did allow for me to see what things might have looked like if I'd chosen other angles for stills.
+For animating this, I wanted to try doing a turnaround, with the color projection remaining constant and the displacement shifting along around the skull. This meant using separate cameras for the projections and animating one. It didn't quite turn out how I was hoping, but it did allow for me to see what things might have looked like if I'd chosen other angles for stills. The main reason I kept the volume displacement camera projected from the viewing angle is because of how that projection works; keeping it the same relative to the skull would have meant the side view would just be streaks.
 
 <video autoplay loop>
   <source src="/media/prf_turnaround.mp4" type="video/mp4">
