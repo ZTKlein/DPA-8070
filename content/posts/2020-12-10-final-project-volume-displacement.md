@@ -43,6 +43,16 @@ And here's a high-quality render:
 
 ![high quality](/media/prf_skull_hires.jpg "Hi res")
 
+For animating this, I wanted to try doing a turnaround, with the color projection remaining constant and the displacement shifting along around the skull. This meant using separate cameras for the projections and animating one. It didn't quite turn out how I was hoping, but it did allow for me to see what things might have looked like if I'd chosen other angles for stills.
+
+<video autoplay loop>
+  <source src="/media/prf_turnaround.mp4" type="video/mp4">
+</video>
+
+I already shared a hires image of the frontal view above, but I also quite liked this angle:
+
+![angle shot](/media/prf_angle.png "Angle shot")
+
 ### Continuation
 
 Something I want to do going forth is try feeding into a mask with a ramp node to try limiting the displacement to only half of the object, and using a procedural noise or a video as the input so that I can keyframe it in order to animate half of the skull while the other remains still. 
